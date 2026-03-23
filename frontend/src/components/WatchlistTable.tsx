@@ -82,7 +82,7 @@ export default function WatchlistTable({ stocks, onStockClick }: WatchlistTableP
           </div>
 
           {/* Mobile cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:hidden">
             {group.stocks.map((stock) => (
               <StockCard
                 key={stock.ticker}
@@ -93,7 +93,7 @@ export default function WatchlistTable({ stocks, onStockClick }: WatchlistTableP
           </div>
 
           {/* Desktop table */}
-          <div className="hidden lg:block overflow-x-auto rounded-xl border border-gray-800 bg-gray-950/50">
+          <div className="hidden md:block overflow-x-auto rounded-xl border border-gray-800 bg-gray-950/50">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-800 text-left">
