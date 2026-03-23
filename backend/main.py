@@ -14,16 +14,10 @@ from services.market_mood import categorize_stocks
 
 app = FastAPI(title="TradePulse API")
 
-# Allow configured origins, or default to localhost + Vercel production
-allowed_origins = os.environ.get(
-    "ALLOWED_ORIGINS",
-    "http://localhost:3000,https://trade-pulse-two.vercel.app"
-).split(",")
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=allowed_origins,
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
