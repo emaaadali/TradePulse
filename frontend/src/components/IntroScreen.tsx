@@ -44,9 +44,9 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
             phase >= 0 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-3 sm:gap-4 mb-6">
             {/* New pulse/heartbeat logo */}
-            <div className="relative w-14 h-14">
+            <div className="relative w-12 h-12 sm:w-14 sm:h-14">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 shadow-lg shadow-emerald-500/20" />
               <div className="absolute inset-[2px] rounded-2xl bg-gray-950 flex items-center justify-center">
                 <svg
@@ -74,7 +74,7 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
               {/* Glow ring */}
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-blue-500/20 blur-sm -z-10" />
             </div>
-            <h1 className="text-5xl font-bold text-white tracking-tight">
+            <h1 className="text-3xl sm:text-5xl font-bold text-white tracking-tight">
               Trade<span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">Pulse</span>
             </h1>
           </div>
@@ -86,7 +86,7 @@ export default function IntroScreen({ onEnter }: IntroScreenProps) {
             phase >= 1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <p className="text-lg text-gray-400 text-center max-w-md mb-10">
+          <p className="text-sm sm:text-lg text-gray-400 text-center max-w-md mb-8 sm:mb-10 px-4">
             Real-time signal scanner that reads the market so you don&apos;t have to.
           </p>
         </div>

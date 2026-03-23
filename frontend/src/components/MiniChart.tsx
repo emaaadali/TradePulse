@@ -122,11 +122,11 @@ export default function MiniChart({ stock, onClose }: MiniChartProps) {
 
   return (
     <div
-      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto"
+      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center sm:p-4 overflow-y-auto"
       onClick={onClose}
     >
       <div
-        className="bg-gray-900 border border-gray-800 rounded-2xl w-full max-w-2xl shadow-2xl my-auto"
+        className="bg-gray-900 border-t sm:border border-gray-800 rounded-t-2xl sm:rounded-2xl w-full max-w-2xl shadow-2xl sm:my-auto max-h-[95vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}

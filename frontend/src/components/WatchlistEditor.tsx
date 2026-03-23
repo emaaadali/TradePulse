@@ -41,11 +41,11 @@ export default function WatchlistEditor({
 
   return (
     <div
-      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center sm:p-4"
       onClick={onClose}
     >
       <div
-        className="bg-gray-900 border border-gray-800 rounded-2xl w-full max-w-md overflow-hidden shadow-2xl"
+        className="bg-gray-900 border-t sm:border border-gray-800 rounded-t-2xl sm:rounded-2xl w-full max-w-md overflow-hidden shadow-2xl max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="p-4 border-b border-gray-800 flex items-center justify-between">

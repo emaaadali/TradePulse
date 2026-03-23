@@ -21,12 +21,12 @@ export default function FilterBar({
   stockCount,
 }: FilterBarProps) {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-3">
-      <div className="flex items-center gap-3">
+    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 -mx-1 px-1">
         <select
           value={sector}
           onChange={(e) => onSectorChange(e.target.value)}
-          className="px-3 py-1.5 text-xs bg-gray-900 border border-gray-800 rounded-md text-gray-300 focus:outline-none focus:ring-1 focus:ring-emerald-500/50 focus:border-emerald-500/50"
+          className="px-3 py-2 sm:py-1.5 text-xs bg-gray-900 border border-gray-800 rounded-lg sm:rounded-md text-gray-300 focus:outline-none focus:ring-1 focus:ring-emerald-500/50 focus:border-emerald-500/50 min-w-[120px]"
         >
           {SECTORS.map((s) => (
             <option key={s} value={s}>
@@ -38,7 +38,7 @@ export default function FilterBar({
         <select
           value={sortBy}
           onChange={(e) => onSortChange(e.target.value as SortOption)}
-          className="px-3 py-1.5 text-xs bg-gray-900 border border-gray-800 rounded-md text-gray-300 focus:outline-none focus:ring-1 focus:ring-emerald-500/50 focus:border-emerald-500/50"
+          className="px-3 py-2 sm:py-1.5 text-xs bg-gray-900 border border-gray-800 rounded-lg sm:rounded-md text-gray-300 focus:outline-none focus:ring-1 focus:ring-emerald-500/50 focus:border-emerald-500/50 min-w-[140px]"
         >
           <option value="confidence">Sort: Confidence</option>
           <option value="change">Sort: % Change</option>
@@ -46,14 +46,14 @@ export default function FilterBar({
           <option value="ticker">Sort: Ticker</option>
         </select>
 
-        <span className="text-xs text-gray-500">
+        <span className="text-xs text-gray-500 whitespace-nowrap">
           {stockCount} stocks
         </span>
       </div>
 
       <button
         onClick={onEditWatchlist}
-        className="px-3 py-1.5 text-xs font-medium rounded-md bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors flex items-center gap-1.5"
+        className="px-3 py-2 sm:py-1.5 text-xs font-medium rounded-lg sm:rounded-md bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white active:bg-gray-600 transition-colors flex items-center justify-center gap-1.5 w-full sm:w-auto"
       >
         <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />

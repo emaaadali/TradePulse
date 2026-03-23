@@ -97,7 +97,7 @@ export default function Dashboard() {
       {showIntro && <IntroScreen onEnter={handleEnterDashboard} />}
       <Header lastRefresh={lastRefresh} loading={loading} onRefresh={refresh} />
 
-      <main className="max-w-[1600px] mx-auto px-6 py-6 space-y-6">
+      <main className="max-w-[1600px] mx-auto px-4 sm:px-6 py-4 sm:py-6 space-y-4 sm:space-y-6">
         {/* Error state */}
         {error && (
           <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm">

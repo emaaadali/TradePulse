@@ -59,12 +59,12 @@ export default function MarketMood({ mood, activeFilter, onFilterChange }: Marke
   ];
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
       {cards.map((card) => (
         <button
           key={card.key}
           onClick={() => onFilterChange(activeFilter === card.key ? "all" : card.key)}
-          className={`p-4 rounded-xl border transition-all duration-200 text-left ${
+          className={`p-3 sm:p-4 rounded-xl border transition-all duration-200 text-left active:scale-[0.98] ${
             activeFilter === card.key
               ? `${card.bgColor} ${card.borderColor} ring-1 ring-${card.borderColor}`
               : "bg-gray-900/50 border-gray-800 hover:border-gray-700"
